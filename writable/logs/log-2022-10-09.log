@@ -1,0 +1,3 @@
+CRITICAL - 2022-10-09 04:05:55 --> Class "Locale" not found
+in SYSTEMPATH\CodeIgniter.php on line 181.
+ 1 ROOTPATH\spark(71): CodeIgniter\CodeIgniter->initialize()

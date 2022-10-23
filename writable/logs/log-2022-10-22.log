@@ -1,0 +1,23 @@
+CRITICAL - 2022-10-22 20:52:46 --> Object of class Dompdf\Dompdf could not be converted to string
+in APPPATH\Controllers\TicketController.php on line 261.
+ 1 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\TicketController->generarPDF()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketController))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-22 22:02:54 --> Object of class Dompdf\Dompdf could not be converted to string
+in APPPATH\Controllers\TicketController.php on line 261.
+ 1 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\TicketController->generarPDF()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketController))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-22 22:03:52 --> Call to a member function build_tree() on null
+in VENDORPATH\dompdf\dompdf\src\Dompdf.php on line 526.
+ 1 VENDORPATH\dompdf\dompdf\src\Dompdf.php(693): Dompdf\Dompdf->processHtml()
+ 2 APPPATH\Controllers\TicketController.php(262): Dompdf\Dompdf->render()
+ 3 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\TicketController->generarPDF()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketController))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

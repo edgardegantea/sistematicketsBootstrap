@@ -1,0 +1,7 @@
+CRITICAL - 2022-10-04 12:16:53 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::count()
+in APPPATH\Controllers\KanbanController.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\KanbanController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KanbanController))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
