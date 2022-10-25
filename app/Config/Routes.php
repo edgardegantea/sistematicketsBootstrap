@@ -37,6 +37,9 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 
 
+$routes->get('udboard', 'FrontendController::index');
+
+
 $routes->get('imprimirComprobante', 'TicketController::imprimirComprobante');
 
 $routes->get('exportarpdf', 'TicketController::exportarPDF');

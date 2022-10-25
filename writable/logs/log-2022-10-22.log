@@ -21,3 +21,150 @@ in VENDORPATH\dompdf\dompdf\src\Dompdf.php on line 526.
  5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
  7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-22 22:58:47 --> syntax error, unexpected variable "$mihtml"
+in APPPATH\Controllers\TicketController.php on line 269.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\TicketController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\TicketController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\TicketController')
+ 4 SYSTEMPATH\CodeIgniter.php(852): class_exists('\\App\\Controllers\\TicketController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-22 23:22:47 --> syntax error, unexpected single-quoted string "</td>"
+in APPPATH\Controllers\TicketController.php on line 290.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\TicketController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\TicketController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\TicketController')
+ 4 SYSTEMPATH\CodeIgniter.php(852): class_exists('\\App\\Controllers\\TicketController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-22 23:23:11 --> Undefined constant "App\Controllers\id"
+in APPPATH\Controllers\TicketController.php on line 290.
+ 1 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\TicketController->generarPDF()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketController))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-22 23:23:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\TicketController.php on line 290.
+ 1 APPPATH\Controllers\TicketController.php(290): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\TicketController.php', 290)
+ 2 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\TicketController->generarPDF()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketController))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-22 23:24:05 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\TicketController.php on line 290.
+ 1 APPPATH\Controllers\TicketController.php(290): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\TicketController.php', 290)
+ 2 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\TicketController->generarPDF()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketController))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-22 23:24:24 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\TicketController.php on line 291.
+ 1 APPPATH\Controllers\TicketController.php(291): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\TicketController.php', 291)
+ 2 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\TicketController->generarPDF()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketController))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-22 23:27:10 --> mysqli_query() expects at least 2 arguments, 1 given
+in APPPATH\Controllers\TicketController.php on line 285.
+ 1 APPPATH\Controllers\TicketController.php(285): mysqli_query(Object(App\Models\Ticket))
+ 2 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\TicketController->generarPDF()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketController))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-22 23:27:35 --> mysqli_query() expects at least 2 arguments, 1 given
+in APPPATH\Controllers\TicketController.php on line 285.
+ 1 APPPATH\Controllers\TicketController.php(285): mysqli_query(Object(App\Models\Ticket))
+ 2 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\TicketController->generarPDF()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketController))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-22 23:27:57 --> mysqli_query(): Argument #1 ($mysql) must be of type mysqli, CodeIgniter\Database\MySQLi\Connection given
+in APPPATH\Controllers\TicketController.php on line 285.
+ 1 APPPATH\Controllers\TicketController.php(285): mysqli_query(Object(CodeIgniter\Database\MySQLi\Connection), Object(App\Models\Ticket))
+ 2 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\TicketController->generarPDF()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketController))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-22 23:34:15 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::findAll()
+in APPPATH\Controllers\TicketController.php on line 285.
+ 1 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\TicketController->generarPDF()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketController))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-22 23:36:33 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::get()
+in APPPATH\Controllers\TicketController.php on line 285.
+ 1 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\TicketController->generarPDF()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketController))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-22 23:37:12 --> mysqli_query(): Argument #1 ($mysql) must be of type mysqli, CodeIgniter\Database\MySQLi\Connection given
+in APPPATH\Controllers\TicketController.php on line 286.
+ 1 APPPATH\Controllers\TicketController.php(286): mysqli_query(Object(CodeIgniter\Database\MySQLi\Connection), Object(CodeIgniter\Database\MySQLi\Result))
+ 2 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\TicketController->generarPDF()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketController))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-22 23:37:34 --> Undefined variable $query
+in APPPATH\Controllers\TicketController.php on line 285.
+ 1 APPPATH\Controllers\TicketController.php(285): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $query', 'APPPATH\\Controllers\\TicketController.php', 285)
+ 2 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\TicketController->generarPDF()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketController))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-22 23:37:38 --> Undefined variable $query
+in APPPATH\Controllers\TicketController.php on line 285.
+ 1 APPPATH\Controllers\TicketController.php(285): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $query', 'APPPATH\\Controllers\\TicketController.php', 285)
+ 2 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\TicketController->generarPDF()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketController))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-22 23:37:59 --> mysqli_query(): Argument #1 ($mysql) must be of type mysqli, CodeIgniter\Database\MySQLi\Connection given
+in APPPATH\Controllers\TicketController.php on line 286.
+ 1 APPPATH\Controllers\TicketController.php(286): mysqli_query(Object(CodeIgniter\Database\MySQLi\Connection), 'select * from tickets')
+ 2 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\TicketController->generarPDF()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketController))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-22 23:39:25 --> Undefined array key "asunto"
+in APPPATH\Controllers\TicketController.php on line 304.
+ 1 APPPATH\Controllers\TicketController.php(304): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "asunto"', 'APPPATH\\Controllers\\TicketController.php', 304)
+ 2 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\TicketController->generarPDF()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketController))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-22 23:43:26 --> syntax error, unexpected token "if"
+in APPPATH\Controllers\TicketController.php on line 303.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\TicketController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\TicketController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\TicketController')
+ 4 SYSTEMPATH\CodeIgniter.php(852): class_exists('\\App\\Controllers\\TicketController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-22 23:58:17 --> Undefined variable $mihtml
+in APPPATH\Controllers\TicketController.php on line 281.
+ 1 APPPATH\Controllers\TicketController.php(281): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mihtml', 'APPPATH\\Controllers\\TicketController.php', 281)
+ 2 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\TicketController->generarPDF()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketController))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

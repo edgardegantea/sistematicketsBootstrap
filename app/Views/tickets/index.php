@@ -10,11 +10,22 @@
         <span class="mdi mdi-24px mdi-plus-circle-outline"></span>  Nuevo
     </a>
 
-    <a href="/tickets/pdf" class="button is-outlined is-light-has-text-center"><span></span>PDF</a>
 </div>
+
 <?= $this->endSection() ?>
 
+
+
 <?= $this->section('content'); ?>
+
+<section class="is-justify-content-end">
+    <div>
+        <a href="tickets/pdf" class="button is-outlined is-light-has-text-center"><span></span>Generar PDF</a>
+
+    <a href="/tickets/descargarpdf" class="button is-outlined is-light-has-text-center"><span></span>Descargar PDF</a>
+    </div>
+</section>
+
 
 <section class="section">
     <div class="">

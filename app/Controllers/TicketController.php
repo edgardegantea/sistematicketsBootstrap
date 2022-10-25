@@ -159,8 +159,6 @@ class TicketController extends ResourceController
     {
         $ticket = $this->ticket->find($id);
         if ($ticket) {
-
-
             $categories = model('Categoria');
             $priorities = model('Prioridad');
             $status = model('Status');
@@ -223,6 +221,7 @@ class TicketController extends ResourceController
         return redirect()->to(base_url('/tickets'));
     }
 
+    
     /**
      * Delete the designated resource object from the model
      *
@@ -236,13 +235,13 @@ class TicketController extends ResourceController
     }
 
 
-
     public function exportarXLSX()
     {
         echo 'Este script exporta datos de la base de datos a un archivo .xlsx';
     }
 
-	public function exportarPDF()
+	
+    public function exportarPDF()
 	{
 		echo "Aquí irá la exportación en PDF";
 	}
@@ -253,15 +252,136 @@ class TicketController extends ResourceController
         return view('comprobante/imprimirComprobante');
     }
 
+
     public function generarPDF()
     {
+
+        $mesx = date("n");
+        $arrayMeses = array(
+            1 => "Enero",
+            2 => "Febrero",
+            3 => "Marzo", 
+            4 => "Abril", 
+            5 => "Mayo", 
+            6 => "Junio", 
+            7 => "Julio", 
+            8 => "Agosto", 
+            9 => "Septiembre", 
+            10 => "Octubre", 
+            11 => "Noviembre", 
+            12 => "Diciembre"
+        );
+        $mes = $arrayMeses[$mesx];
+
+        $diax = date("w"); // Dia semana 0 a 6, donde 0 es domingo 
+        $array_dia_semana = array(
+            0 => "Domingo", 
+            1 => "Lunes", 
+            2 => "Martes", 
+            3 => "Miércoles", 
+            4 => "Jueves", 
+            5 => "Viernes", 
+            6 => "Sábado"
+        );
+        $dia_semana = $array_dia_semana[$diax];  
+
+        $dia = date("d");    // Devuelve el día del mes
+        $anio = date("Y");    // Devuelve el año
+
+        $fecha = "$dia_semana $dia de $mes de $anio.";
+
+        $pdf = new Dompdf();
+        /*
         $pdf=new Dompdf();
         $html=file_get_contents("http://localhost:8080/tickets");
         $pdf->loadHtml($html);
         $pdf->setPaper("A7","landingpage");
         $pdf->render();
         $pdf->stream();
+        */
 
+        // Configuración necesaria para acceder a la data base.
+        $hostname = "localhost";
+        $usuariodb = "root";
+        $passworddb = "";
+        $dbname = "sistematickets";
+            
+        // Generando la conexión con el servidor
+        $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
+
+        $mihtml = '<style>'.file_get_contents("assets/css/bulma.min.css").'</style>';
+
+        //$mihtml 
+
+        $mihtml .= '<table class="table is-striped is-bordered px-6">';
+        $mihtml .= '<tr><td colspan=5 style="text-align:center">CONCENTRADO DE TICKETS DE SOPORTE</td></tr><br><br>';
+
+        $mihtml .= '<tr><td colspan=5 style="text-align:left">Fecha: ' . $fecha .' </td></tr><br><br>';
+        $mihtml .= '<thead style="font-size:10">';
+        $mihtml .= '<tr>';
+        $mihtml .= '<th>ID</th>';
+        $mihtml .= '<th>Estado</th>';
+        $mihtml .= '<th>Asunto</th>';
+        $mihtml .= '<th>Email</th>';
+        $mihtml .= '<th>Contacto</th>';
+        $mihtml .= '</tr>';
+        $mihtml .= '</thead>';
+        $mihtml .= '<tbody style="font-size:8">';
+
+        $db = \Config\Database::connect();
+        $total = $db->table('tickets')->countAll();
+        $ticketsNoIniciados = $db->table('tickets')->like('status', 's01')->countAllResults();
+        $ticketsFinalizados = $db->table('tickets')->like('status', 's05')->countAllResults();
+
+        $mihtml .= '<tr height=80px style="text-align:center"><td colspan=5 style="text-center">Total: ' . $total . ' tickets, de los cuales ' . $ticketsNoIniciados . ' tickets tienen estado NO INICIADO y '. $ticketsFinalizados. ' tickets FINALIZADOS</td>';
+        /*
+        $mihtml .= '<td style="text-center">' . $ticketsNoIniciados . ' tickets NO INICIADOS</td>';
+        $mihtml .= '<td colspan=2 style="text-center">' . $ticketsFinalizados. ' tickets FINALIZADOS</td></tr>';
+        */
+
+        // $tickets = model('Ticket');
+
+        $resultado = "select * from tickets order by status asc";
+        $resultado = mysqli_query($conectar, $resultado);
+        
+        while ($ticket = mysqli_fetch_assoc($resultado)) {
+            $mihtml .= '<tr>';
+            $mihtml .= '<td>' . $ticket['id'] . '</td>';
+            if ($ticket['status'] == 's01') {
+                            $mihtml .= '<td style="color:red">' . 'No iniciado' . '</td>';
+                            } else if ($ticket['status'] == 's02') {
+                                $mihtml .= '<td>' . 'Iniciado' . '</td>';
+                            } else if ($ticket['status'] == 's03') {
+                                $mihtml .= '<td>' . 'En revisión' . '</td>';
+                            } else if ($ticket['status'] == 's04') {
+                                $mihtml .= '<td>' . 'En proceso' . '</td>';
+                            } else if ($ticket['status'] == 's05') {
+                                $mihtml .= '<td style="color:green">' . 'Finalizado' . '</td>';
+                            } else if ($ticket['status'] == 's06') {
+                                $mihtml .= '<td>' . 'Abierto' . '</td>';
+                            } else if ($ticket['status'] == 's07') {
+                                $mihtml .= '<td>' . 'Reabierto' . '</td>';
+                            } else if ($ticket['status'] == 's08') {
+                                $mihtml .= '<td>' . 'Cerrado' . '</td>';
+                            }
+            $mihtml .= '<td>' . $ticket['title'] . '</td>';
+            $mihtml .= '<td>' . $ticket['email'] . '</td>';
+            $mihtml .= '<td>' . $ticket['phone'] . '</td>';
+            $mihtml .= '</tr>';
+
+        }
+
+
+        $mihtml .= '</tr>';
+
+        $mihtml .= '</tbody>';
+        $mihtml .= '</table>';
+
+        
+        $pdf->loadHtml($mihtml);
+        $pdf->setPaper("Letter", "landingpage");
+        $pdf->render();
+        $pdf->stream();
     }
 
 }
