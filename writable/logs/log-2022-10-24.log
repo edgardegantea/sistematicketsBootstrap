@@ -102,3 +102,15 @@ in APPPATH\Config\Routes.php on line 40.
  3 SYSTEMPATH\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 SYSTEMPATH\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
  5 ROOTPATH\spark(86): CodeIgniter\CLI\Console->run()
+CRITICAL - 2022-10-24 22:00:24 --> Undefined variable $ticket
+in APPPATH\Views\kanban\index.php on line 115.
+ 1 APPPATH\Views\kanban\index.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ticket', 'APPPATH\\Views\\kanban\\index.php', 115)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\kanban\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('kanban/index', [], true)
+ 5 APPPATH\Controllers\KanbanController.php(43): view('kanban/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\KanbanController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KanbanController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
